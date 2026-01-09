@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Library System</h2>
+
+    <div class="container">
+        <div class="tables">
+            <div>
+                <h3>Available Books</h3>
+                <table border="1">
+                    <thead>
+                        <tr><th>Code</th><th>Title</th><th>Author</th></tr>
+                    </thead>
+                    <tbody id="bookList"></tbody>
+                </table>
+            </div>
+
+            <div>
+                <h3>Borrowed Books</h3>
+                <table border="1">
+                    <thead>
+                        <tr><th>Code</th><th>Title</th><th>Author</th></tr>
+                    </thead>
+                    <tbody id="borrowedList"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Add Book</h3>
+                <input id="title" placeholder="Title">
+                <input id="author" placeholder="Author">
+                <button onclick="addBook()">Add</button>
+            </div>
+
+            <div class="card">
+                <h3>Borrow Book</h3>
+                <input id="borrowCode" placeholder="Book Code">
+                <button onclick="borrowBook()">Borrow</button>
+            </div>
+
+            <div class="card">
+                <h3>Return Book</h3>
+                <input id="returnCode" placeholder="Book Code">
+                <button onclick="returnBook()">Return</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="refresh-btn" onclick="loadBooks()">Refresh Lists</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
